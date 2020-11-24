@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from "react";
-import * as ROUTES from "../../constants/routes";
-import {Link} from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import * as ROUTES from '../../constants/routes';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 
-const Landing =() => {
-    return (
-        <>
+const Landing = () => {
+  return (
+    <>
 
-            <div className="Landing">
-                <h1>Landing Page</h1>
-                <button>
-                    <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-                </button>
-            </div>
-        </>
-    )
-}
+      <div className="Landing">
+        <h1>Landing Page</h1>
 
-export default Landing
+        <Link to={ROUTES.SIGN_IN}><Button variant="primary" size="lg">
+          Sign In
+        </Button>{' '}</Link>
+
+      </div>
+    </>
+  );
+};
+
+export default Landing;
