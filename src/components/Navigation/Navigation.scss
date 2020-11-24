@@ -1,0 +1,15 @@
+.Navigation {
+  background: ghostwhite;
+  position: sticky;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+
+    li {
+      list-style: none;
+      margin-right: 30px;
+    }
+  }
+}
