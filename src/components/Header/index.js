@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Navigation from "../Navigation";
 
 
-const Header = () => {
+const Header = ({authUser}) => {
     return (
-        <Navigation/>
+        <Navigation authUser={authUser}/>
     )
 }
 export default Header;

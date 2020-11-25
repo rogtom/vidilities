@@ -4,4 +4,15 @@
   justify-content: center;
   align-items: center;
   height: calc(100vh - 70px );
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+
 }
+

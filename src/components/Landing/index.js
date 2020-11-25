@@ -11,9 +11,8 @@ const Landing = () => {
       <div className="Landing">
         <h1>Landing Page</h1>
 
-        <Link to={ROUTES.SIGN_IN}><Button variant="primary" size="lg">
-          Sign In
-        </Button>{' '}</Link>
+        <Link  to={ROUTES.HOME} ><h1>go and find your favourite films and TV series</h1></Link>
+
 
       </div>
     </>
