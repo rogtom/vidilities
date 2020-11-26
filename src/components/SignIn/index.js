@@ -6,12 +6,17 @@ import { SignUpLink } from '../SignUp';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import { Button, Form } from 'react-bootstrap';
+import { PasswordForgetLink } from '../PasswordForget';
 
 const SignInPage = () => (
   <div className="container">
     <h1>SignIn</h1>
     <SignInForm />
-    <SignUpLink />
+    <div>
+      <SignUpLink />
+      <PasswordForgetLink/>
+    </div>
+
   </div>
 );
 

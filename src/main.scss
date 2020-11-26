@@ -1,4 +1,9 @@
-
+@import "~bootstrap/scss/bootstrap";
+@import "./components/Navigation/Navigation";
+@import "./components/Landing/Landing";
+@import "components/SignUp/signup";
+@import "components/SignIn/signin";
+@import "components/Card/Card";
 
 
 * {
@@ -16,8 +21,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-@import "~bootstrap/scss/bootstrap";
-@import "./components/Navigation/Navigation";
-@import "./components/Landing/Landing";
-@import "components/SignUp/signup";
-@import "components/SignIn/signin";
