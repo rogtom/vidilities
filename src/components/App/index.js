@@ -13,6 +13,7 @@ import AccountPage from '../Account';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session/index';
 import Header from '../Header';
+import PasswordChangeForm from '../PasswordChange';
 
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
           />
           <Route exact path={ROUTES.HOME} component={HomePage} />
           <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
+
       </div>
   </Router>
 );

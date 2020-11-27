@@ -1,5 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore'
 
 
 
@@ -19,13 +20,26 @@ class Firebase {
     app.initializeApp(config);
 
     this.auth = app.auth();
+    this.db = app.firestore();
 
   }
 
   // *** Auth API ***
 
   doCreateUserWithEmailAndPassword = (email, password) =>
-    this.auth.createUserWithEmailAndPassword(email, password);
+    this.auth.createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        //Once the user creation has happened successfully, we can add the currentUser into firestore
+        //with the appropriate details.
+        this.db.collection('users').doc(this.auth.currentUser.uid)
+          .set({
+          })
+          //ensure we catch any errors at this stage to advise us if something does go wrong
+          .catch(error => {
+            console.log('Something went wrong with added user to firestore: ', error);
+          })
+      })
+  ;
 
   doSignInWithEmailAndPassword = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
@@ -36,6 +50,13 @@ class Firebase {
 
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
+
+
+  // *** Firestore API ***
+
+
+  addToUserFavorite = (collection, film ) =>
+    this.db.collection(collection).doc(this.auth.currentUser.uid).set(film)
 
 }
 
