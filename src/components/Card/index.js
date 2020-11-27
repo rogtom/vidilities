@@ -16,7 +16,7 @@ const FilmCard = ({ title, picture, locations, firebase }) => {
   };
 
   const handleAddToFavorite = () => {
-    firebase.addToUserFavorite('users', film)
+    firebase.addToUserFavorite('users', {film})
       .then(() => console.log('działa'))
       .catch(err => console.log(err));
 

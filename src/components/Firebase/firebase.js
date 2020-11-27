@@ -32,8 +32,7 @@ class Firebase {
         //Once the user creation has happened successfully, we can add the currentUser into firestore
         //with the appropriate details.
         this.db.collection('users').doc(this.auth.currentUser.uid)
-          .set({
-          })
+          .set({favorites: []})
           //ensure we catch any errors at this stage to advise us if something does go wrong
           .catch(error => {
             console.log('Something went wrong with added user to firestore: ', error);
@@ -55,7 +54,7 @@ class Firebase {
 
 
   addToUserFavorite = (collection, film ) =>
-    this.db.collection(collection).doc(this.auth.currentUser.uid).set(film)
+    this.db.collection(collection).doc(this.auth.currentUser.uid).update({favorites: app.firestore.FieldValue.arrayUnion(film)})
 
 
   getUserFavorites =  () => {
