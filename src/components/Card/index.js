@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, ListGroup } from 'react-bootstrap';
 import Location from '../Locations';
 import { AuthUserContext } from '../Session';
@@ -9,7 +9,9 @@ import Firebase, { FirebaseContext } from '../Firebase';
 
 const FilmCard = ({ title, id, picture, locations, firebase }) => {
 
-  const film = {
+
+
+  const film  = {
     id:id,
     title: title,
     picture: picture,
@@ -22,6 +24,7 @@ const FilmCard = ({ title, id, picture, locations, firebase }) => {
       .catch(err => console.log(err));
 
   };
+
 
   return (
 
