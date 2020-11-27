@@ -51,6 +51,12 @@ class Firebase {
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
 
+  // *** Firestore API ***
+
+
+  addToUserFavorite = (collection, film ) =>
+    this.db.collection(collection).doc(this.auth.currentUser.uid).set(film)
+
 }
 
 export default Firebase;
