@@ -16,7 +16,7 @@ const UserFilms = ({ firebase }) => {
 
   return (
 
-    <div className="d-flex justify-content-between">
+    <div className="d-flex justify-content-between flex-lg-wrap">
       {films?.map(el => <FavCard key={el.film.id}
                                  picture={el.film.picture}
                                  title={el.film.title}

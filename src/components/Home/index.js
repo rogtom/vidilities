@@ -41,7 +41,7 @@ const Home = () => {
       <h3>Go anf find something interesting </h3>
       <Search submitTerm={handleSearchSubmit} />
 
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center ">
         {filmData.map(film => <FilmCard key={film.id}
                                         id={film.id}
                                         title={film.name}
