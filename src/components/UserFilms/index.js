@@ -13,17 +13,17 @@ const UserFilms = ({ firebase }) => {
 
   }, []);
 
+
   return (
-    // <div>
-    //
-    //   <ul>
-    //     {films.map(el => <li key={el.film.id}>{el.film.title}</li> )}
-    //   </ul>
-    //
-    // </div>
 
     <CardColumns>
-      {films?.map(el => <FavCard key={el.film.id} picture={el.film.picture} title={el.film.title} locations={el.film.locations} id={el.film.id}/>)}
+      {films?.map(el => <FavCard key={el.film.id}
+                                 picture={el.film.picture}
+                                 title={el.film.title}
+                                 locations={el.film.locations}
+                                 id={el.film.id}
+                                 films={films}
+                                 setFilms={setFilms}/>)}
     </CardColumns>
   );
 };

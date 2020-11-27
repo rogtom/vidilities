@@ -58,7 +58,8 @@ class Firebase {
 
 
   getUserFavorites =  (successCallback) => {
-    this.db.collection("users").doc(this.auth.currentUser.uid).get()
+    this.db.collection("users").doc(this.auth.currentUser.uid)
+      .get()
       .then(doc => {
         if ( typeof successCallback === "function") {
           successCallback(doc.data().favorites)
@@ -68,9 +69,17 @@ class Firebase {
       console.log("Error getting document:", error);
     });
 
-
   }
 
+  removeFavorite = (nevData) => {
+    this.db.collection('users').doc(this.auth.currentUser.uid).set(nevData)
+        .catch(err => console.log(err))
+
+      .catch(function(error) {
+        console.log("Error getting document:", error);
+      });
+
+  }
 
 }
 
