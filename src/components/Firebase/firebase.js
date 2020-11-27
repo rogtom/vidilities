@@ -57,17 +57,17 @@ class Firebase {
     this.db.collection(collection).doc(this.auth.currentUser.uid).update({favorites: app.firestore.FieldValue.arrayUnion(film)})
 
 
-  getUserFavorites =  () => {
-    this.db.collection("users").doc(this.auth.currentUser.uid).get().then(function(doc) {
-      if (doc.exists) {
-        console.log("Document data:", doc.data());
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-      }
-    }).catch(function(error) {
+  getUserFavorites =  (successCallback) => {
+    this.db.collection("users").doc(this.auth.currentUser.uid).get()
+      .then(doc => {
+        if ( typeof successCallback === "function") {
+          successCallback(doc.data().favorites)
+        }
+      })
+      .catch(function(error) {
       console.log("Error getting document:", error);
     });
+
 
   }
 

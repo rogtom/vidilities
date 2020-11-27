@@ -27,20 +27,20 @@ const CarouselItem = (picture, title) => {
 
 const UserFilms = ({firebase}) => {
 
-  const [films,setFilms] =useState([])
+  const [films,setFilms] =useState(null)
 
-// useEffect(() => {
-//
-//   firebase.getUserFavorites(setFilms())
-//
-// },[])
+useEffect(() => {
 
+firebase.getUserFavorites(setFilms)
+
+},[])
+  console.log(films);
   return (
     <div>
 
 
       <Carousel >
-        {/*{films.map(film => <CarouselItem key={film.id}/>)}*/}
+        {films?.map((el, i )=> <li key={i}>{el.film.title}</li> )}
       </Carousel>
 
 
