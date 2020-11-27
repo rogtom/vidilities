@@ -1,51 +1,31 @@
-import React, { useState, useEffect } from "react";
-import { Carousel } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Carousel, Card ,CardColumns} from 'react-bootstrap';
 import { withFirebase } from '../Firebase';
-import Firebase from '../Firebase';
+import FavCard from './FavoriteCard';
 
+const UserFilms = ({ firebase }) => {
 
-const CarouselItem = (picture, title) => {
+  const [films, setFilms] = useState(null);
+
+  useEffect(() => {
+
+    firebase.getUserFavorites(setFilms);
+
+  }, []);
 
   return (
+    // <div>
+    //
+    //   <ul>
+    //     {films.map(el => <li key={el.film.id}>{el.film.title}</li> )}
+    //   </ul>
+    //
+    // </div>
 
-    <Carousel.Item>
-      <img
-        className="d-block w-100"
-        src="holder.js/800x400?text=First slide&bg=373940"
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
+    <CardColumns>
+      {films?.map(el => <FavCard key={el.film.id} picture={el.film.picture} title={el.film.title} locations={el.film.locations} id={el.film.id}/>)}
+    </CardColumns>
+  );
+};
 
-  )
-
-}
-
-
-const UserFilms = ({firebase}) => {
-
-  const [films,setFilms] =useState(null)
-
-useEffect(() => {
-
-firebase.getUserFavorites(setFilms)
-
-},[])
-  console.log(films);
-  return (
-    <div>
-
-
-      <Carousel >
-        {films?.map((el, i )=> <li key={i}>{el.film.title}</li> )}
-      </Carousel>
-
-
-    </div>
-  )
-}
-
-export default withFirebase(UserFilms)
+export default withFirebase(UserFilms);

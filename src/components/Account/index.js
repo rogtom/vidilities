@@ -28,18 +28,14 @@ const AccountPage = () => {
     {authUser =>
       authUser &&
       <div  className="container">
-        <Row/>
+        <Row className="d-flex"/>
         <Col sm={2} className="justify-content-start">
           <SideNaw toggle={toggleClass}/>
         </Col>
         <Col sm={10} >
           <h1>Account Page</h1>
           <div>
-
-
             <UserFilms/>
-
-
             {pasShow && < PasswordChangeForm />}
           </div>
         </Col>
