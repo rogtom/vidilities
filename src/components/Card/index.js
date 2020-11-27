@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import Firebase, { FirebaseContext } from '../Firebase';
 
-const FilmCard = ({ title, picture, locations, firebase }) => {
+const FilmCard = ({ title, id, picture, locations, firebase }) => {
 
   const film = {
+    id:id,
     title: title,
     picture: picture,
     locations: locations,

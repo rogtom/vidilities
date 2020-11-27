@@ -42,7 +42,10 @@ const Home = () => {
       <Search submitTerm={handleSearchSubmit} />
 
       <div className="row justify-content-start  m-auto">
-        {filmData.map(film => <FilmCard key={film.id} title={film.name} picture={film.picture}
+        {filmData.map(film => <FilmCard key={film.id}
+                                        id={film.id}
+                                        title={film.name}
+                                        picture={film.picture}
                                         locations={film.locations} />)}
       </div>
 
