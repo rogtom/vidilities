@@ -1,0 +1,12 @@
+.side-nav {
+  padding: 15px ;
+  background: rgba(0,0,0, .3);
+  border: 2px solid #3f3635;
+  box-shadow: 5px 5px 15px 0 rgba(0,0,0, 0.75);
+}
+
+span {
+  &:hover {
+    color: white;
+  }
+}

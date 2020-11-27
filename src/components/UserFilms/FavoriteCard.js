@@ -22,15 +22,18 @@ const FavCard = ({ id, title, picture, locations, firebase, setFilms, films }) =
 
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} className="favoriteCard">
       <Card.Img variant="top" src={picture} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <ListGroup variant="flush">
-          {locations.map(el => <ListGroup.Item key={el.id}>{el.display_name}</ListGroup.Item>)}
+      <Card.Body className="d-flex flex-column justify-content-between">
+        <div>
+          <Card.Title>{title}</Card.Title>
 
-        </ListGroup>
-        <Button variant="primary" onClick={removeFav}>Remove from favorite</Button>
+            {locations.map(el => <ListGroup.Item key={el.id}
+                                                 className="favoriteCardBody">{el.display_name}</ListGroup.Item>)}
+
+
+        </div>
+        <div><Button variant="outline-secondary" className="text-white remove-btn" onClick={removeFav}>Remove from favorite</Button></div>
       </Card.Body>
     </Card>
   );

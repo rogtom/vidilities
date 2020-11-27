@@ -49,7 +49,7 @@ class PasswordForgetFormBase extends Component {
     const isInvalid = email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} >
 
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -66,7 +66,7 @@ class PasswordForgetFormBase extends Component {
 
 
 
-        <Button variant="primary" type="submit" disabled={isInvalid}>
+        <Button variant="outline-secondary" type="submit" disabled={isInvalid} className="pass-forget-btn text-white">
           Reset My Password
         </Button>
 

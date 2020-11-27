@@ -7,7 +7,7 @@ const Location =({name, picture}) => {
   return (
 
     <div>
-      <ListGroup.Item>{name}<Image className="locationImageSize" src={picture} roundedCircle /></ListGroup.Item>
+      <ListGroup.Item className="ListGroupItem">{name}<Image className="locationImageSize" src={picture} roundedCircle /></ListGroup.Item>
 
     </div>
 

@@ -1,9 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./components/Navigation/Navigation";
 @import "./components/Landing/Landing";
-@import "components/SignUp/signup";
-@import "components/SignIn/signin";
-@import "components/Card/Card";
+@import "./components/SignUp/signup";
+@import "./components/SignIn/signin";
+@import "./components/Card/Card";
+@import "./components/Search/Serch";
+@import "components/UserFilms/userfilms";
+@import "./components/PasswordForget/passForget";
+@import "./components/Account/account";
+@import "./components/SideNav/sidenav";
 
 
 * {
@@ -13,11 +18,18 @@
 }
 
 body {
-  background: lightsteelblue;
-  color: black;
+
+background: linear-gradient(rgba(64,55,54, .7), rgba(64, 55, 54, 0.7)), url("./assets/odeon-edit-001.jpg");
+  color: lightgray;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+
 }
+

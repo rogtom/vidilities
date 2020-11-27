@@ -9,10 +9,10 @@ const SideNaw =({toggle}) => {
   }
 
   return (
-    <Nav defaultActiveKey="/home" className="flex-column">
+    <Nav defaultActiveKey="/home" className="flex-column side-nav" >
 
-      <span style={{cursor: 'pointer'}} onClick={handleToggle}>Change password</span>
-      <span style={{cursor: 'pointer'}} >User favorites</span>
+      <span style={{cursor: 'pointer', marginBottom: "25px",}} onClick={handleToggle}>User favorites</span>
+      <span style={{cursor: 'pointer', marginBottom: "25px"}} onClick={handleToggle}>Change password</span>
 
     </Nav>
   )

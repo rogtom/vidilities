@@ -10,7 +10,7 @@ import { Button } from 'react-bootstrap';
 import SignOutButton from '../SignOut';
 
 const SignUpPage = () => (
-  <div className="container">
+  <div className="container d-flex flex-column align-items-center justify-content-center">
     <h1>SignUp</h1>
     <SignUpForm />
   </div>
@@ -73,7 +73,7 @@ class SignUpFormBase  extends Component {
 
 
     return (
-      <div>
+      <div >
         <form onSubmit={this.onSubmit}>
 
           <Form.Group controlId="formBasicName">
@@ -119,7 +119,7 @@ class SignUpFormBase  extends Component {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit" disabled={isInvalid}>
+          <Button variant="outline-secondary" type="submit" disabled={isInvalid} className="submit-btn text-white">
             Submit
           </Button>
 

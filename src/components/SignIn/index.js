@@ -7,13 +7,14 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import { Button, Form } from 'react-bootstrap';
 import { PasswordForgetLink } from '../PasswordForget';
+import "./signin.scss"
 
 const SignInPage = () => (
-  <div className="container">
+  <div className="container d-flex flex-column align-items-center justify-content-center ">
     <h1>SignIn</h1>
-    <SignInForm />
+    <SignInForm/>
     <div>
-      <SignUpLink />
+      <SignUpLink/>
       <PasswordForgetLink/>
     </div>
 
@@ -59,16 +60,17 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form  onSubmit={this.onSubmit} className="dupa">
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label >Email address</Form.Label>
           <Form.Control type="email"
                         placeholder="Enter email"
                         name="email"
                         value={email}
                         onChange={this.onChange}
+                        className="email-signIn"
           />
-          <Form.Text className="text-muted">
+          <Form.Text className="text-muted email-description" >
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
@@ -85,7 +87,7 @@ class SignInFormBase extends Component {
         </Form.Group>
 
 
-        <Button variant="primary" type="submit" disabled={isInvalid}>
+        <Button variant="outline-secondary" type="submit" disabled={isInvalid} size="sm" className="signIn-btn text-white">
           Sign In
         </Button>
 

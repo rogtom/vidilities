@@ -20,11 +20,11 @@ const Search = ({submitTerm}) => {
 
 
   return (
-    <form onSubmit={handleSubmit} >
-      <Form.Group controlId="formBasicSearch">
-        <Form.Label>Search for your favourite movie or TV series</Form.Label>
+    <form onSubmit={handleSubmit}  className="form">
+      <Form.Group controlId="formBasicSearch" className='formGrup'>
+        <Form.Label className="formLabel">Search for your favourite movie or TV series</Form.Label>
         <Form.Control type="text" placeholder="Enter title" onChange={handleChange}/>
-        <Button type={'submit'} variant="primary">Find</Button>
+        <Button type={'submit'} variant="outline-secondary" size="sm" className="find" >Find</Button>
 
       </Form.Group>
     </form>

@@ -28,21 +28,25 @@ const FilmCard = ({ title, id, picture, locations, firebase }) => {
 
   return (
 
-      <Card className="Card" style={{ width: '18rem' }}>
+      <Card className="Card d-flex flex-column " style={{ width: '18rem' }}>
         <Card.Img variant="top" src={picture} />
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          {locations.map(location => <Location key={location.id}
-                                               name={location.display_name}
-                                               picture={location.icon} />)}
+        <Card.Body className="d-flex flex-column justify-content-between ">
+          <div>
+            <Card.Title>{title}</Card.Title>
+            {locations.map(location => <Location key={location.id}
+                                                 name={location.display_name}
+                                                 picture={location.icon} />)}
+          </div>
 
-          <AuthUserContext.Consumer>
+          <div>
+            <AuthUserContext.Consumer>
             {authUser =>
               authUser
-                ? <Button variant="primary" onClick={handleAddToFavorite}>Add to favorite</Button>
-                : <Button variant="primary"><Link to={ROUTES.SIGN_IN}>Sign In</Link></Button>
+                ? <Button variant="outline-secondary" onClick={handleAddToFavorite} className="card-btn text-white">Add to favorite</Button>
+                : <Button variant="outline-secondary" className="card-btn text-white"><Link to={ROUTES.SIGN_IN} >Sign In</Link></Button>
             }
           </AuthUserContext.Consumer>
+          </div>
         </Card.Body>
       </Card>
 

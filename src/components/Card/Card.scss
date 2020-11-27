@@ -1,3 +1,10 @@
 .Card {
-  margin: 20px 0;
+  margin: 10px 25px;
+  background-color: rgba(64,55,54, .9);
+  box-shadow: 5px 5px 15px 0 rgba(0,0,0, 0.75);
+}
+.card-btn {
+  border: 1px solid white;
+  color: lightgray;
+  margin-top: 20px;
 }

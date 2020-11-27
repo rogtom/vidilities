@@ -37,11 +37,11 @@ const Home = () => {
 
 
   return (
-    <div className="container">
-      <h1>Home</h1>
+    <div className="container d-flex flex-column align-items-center justify-content-center">
+      <h3>Go anf find something interesting </h3>
       <Search submitTerm={handleSearchSubmit} />
 
-      <div className="row justify-content-start  m-auto">
+      <div className="d-flex justify-content-center">
         {filmData.map(film => <FilmCard key={film.id}
                                         id={film.id}
                                         title={film.name}
