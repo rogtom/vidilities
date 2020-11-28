@@ -74,7 +74,7 @@ class SignUpFormBase  extends Component {
 
     return (
       <div >
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit} className="sign-up-form">
 
           <Form.Group controlId="formBasicName">
             <Form.Label>Full Name</Form.Label>

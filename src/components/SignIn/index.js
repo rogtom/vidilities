@@ -60,7 +60,7 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
 
     return (
-      <form  onSubmit={this.onSubmit} className="dupa">
+      <form  onSubmit={this.onSubmit} className="signInForm">
         <Form.Group controlId="formBasicEmail">
           <Form.Label >Email address</Form.Label>
           <Form.Control type="email"
