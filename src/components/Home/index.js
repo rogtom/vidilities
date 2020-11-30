@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Search from '../Search';
 import FilmCard from '../Card';
+import ControlledCarousel from '../Slider/Slider';
 
 const Home = () => {
 
   const [term, setTerm] = useState('');
   const [filmData, setFilmData] = useState([]);
+
 
 
   const handleSearchSubmit = (search) => {
@@ -48,6 +50,9 @@ const Home = () => {
                                         picture={film.picture}
                                         locations={film.locations} />)}
       </div>
+
+
+
 
     </div>
   );

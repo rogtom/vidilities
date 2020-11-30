@@ -9,9 +9,9 @@ const Landing = () => {
     <>
 
       <div className="Landing">
-        <h1>Landing Page</h1>
+        <h1 className="landing-title">go and find your favourite films and TV series</h1>
 
-        <Link  to={ROUTES.HOME} ><h1>go and find your favourite films and TV series</h1></Link>
+        <Link  to={ROUTES.HOME} ><button>enter</button></Link>
 
 
       </div>

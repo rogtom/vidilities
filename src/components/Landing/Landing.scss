@@ -5,12 +5,30 @@
   align-items: center;
   height: calc(100vh - 100px );
 
+  .landing-title {
+    text-transform: uppercase;
+  }
+
   a {
     &:hover {
       text-decoration: none;
     }
-    h1 {
+    button {
       text-transform: uppercase;
+      padding: 10px 30px;
+      margin-top: 25px;
+      border-radius: 5px;
+      background: none;
+      border: 1px solid lightgrey;
+      color: lightgrey;
+      transition: 150ms ease-in-out;
+
+      &:hover {
+        background: rgba(#6C757D, .5);
+        border: 1px solid #6C757D;
+        color: white;
+      }
+
     }
   }
 

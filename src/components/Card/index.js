@@ -30,7 +30,11 @@ const FilmCard = ({ title, id, picture, locations, firebase }) => {
 
       <Card className="Card d-flex flex-column " style={{ width: '18rem' }}>
         <Card.Img variant="top" src={picture} />
+        <Card.Text className="statistic-panel">
+          <span >IMDb: 8.7</span>
+        </Card.Text>
         <Card.Body className="d-flex flex-column justify-content-between ">
+
           <div>
             <Card.Title>{title}</Card.Title>
             {locations.map(location => <Location key={location.id}

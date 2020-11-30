@@ -8,3 +8,15 @@
   color: lightgray;
   margin-top: 20px;
 }
+
+.statistic-panel {
+  background: rgb(66,55,54);
+  background: linear-gradient(0deg, rgba(64,55,54,.9) 0%, rgba(63,55,54,0.6) 50%, rgba(63,55,54,0.2) 100%);
+  font-size: .60rem;
+padding: 0.2rem;
+
+  position: relative;
+  bottom: 1.225rem;
+
+  color: white;
+}
