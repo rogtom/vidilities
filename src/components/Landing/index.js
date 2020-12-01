@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import * as ROUTES from '../../constants/routes';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 
 
 const Landing = () => {
