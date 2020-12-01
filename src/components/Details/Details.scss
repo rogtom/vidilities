@@ -1,0 +1,34 @@
+.details-header, .details-body, .details-footer, .details-list  {
+  background: rgba(64, 55, 54, 1);
+  .close {
+    color: lightgrey;
+  }
+
+}
+.details-list {
+  font-size: .7rem;
+  padding: 3px 0;
+  border: 1px solid grey;
+  margin-top: 10px;
+
+}
+.details-list-first {
+  margin-top: 0;
+}
+
+.details-list__title {
+  font-weight: bold;
+}
+
+.details-list__description {
+  display: flex;
+  flex-direction: column;
+  font-size: .7rem;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+.details-btn {
+  color: lightgrey;
+  border-color: lightgrey;
+
+}

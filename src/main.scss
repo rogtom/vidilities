@@ -1,15 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./variables";
 @import "./components/Navigation/Navigation";
 @import "./components/Landing/Landing";
 @import "./components/SignUp/signup";
 @import "./components/SignIn/signin";
 @import "./components/Card/Card";
 @import "./components/Search/Serch";
-@import "components/UserFilms/userfilms";
+@import "./components/UserFilms/userfilms";
 @import "./components/PasswordForget/passForget";
 @import "./components/Account/account";
 @import "./components/SideNav/sidenav";
 @import "./components/PasswordChange/passChange";
+@import "./components/Details/Details";
 
 
 

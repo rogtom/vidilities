@@ -7,7 +7,7 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import { Button, Form } from 'react-bootstrap';
 import { PasswordForgetLink } from '../PasswordForget';
-import "./signin.scss"
+import "./_signin.scss"
 
 const SignInPage = () => (
   <div className="container d-flex flex-column align-items-center justify-content-center ">
