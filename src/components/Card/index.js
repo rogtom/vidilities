@@ -37,7 +37,7 @@ const FilmCard = ({ title, id, picture, locations, firebase }) => {
 
           <div>
             <Card.Title>{title}</Card.Title>
-            {locations.map(location => <Location key={location.id}
+            {locations?.map(location => <Location key={location.id}
                                                  name={location.display_name}
                                                  picture={location.icon} />)}
           </div>
