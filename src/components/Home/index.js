@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Search from '../Search';
 import FilmCard from '../Card';
 import DetailsModal from '../Details';
-import { Button } from 'react-bootstrap';
+
 
 
 const Home = () => {
@@ -112,7 +112,7 @@ const Home = () => {
             );
           })
 
-          : <p>{error}</p>}
+          : <p>{error.message}</p>}
 
         <>
           <DetailsModal
@@ -122,8 +122,6 @@ const Home = () => {
           />
         </>
       </div>
-
-
     </div>
   );
 };

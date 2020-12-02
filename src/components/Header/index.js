@@ -15,6 +15,7 @@ const Header = ({authUser}) => {
         </Link>
 
           <Navigation authUser={authUser} />
+
       </div>
     )
 }

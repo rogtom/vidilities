@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Modal, Button, Container, Row, Col, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 
 function DetailsModal(props) {
+
   return (
+
     <Modal
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-
     >
       <Modal.Header closeButton className="details-header">
         <Modal.Title id="contained-modal-title-vcenter">
@@ -49,8 +50,6 @@ function DetailsModal(props) {
             </Row>
             </Col>
           </Row>
-
-
         </Container>
       </Modal.Body>
       <Modal.Footer className="details-footer">

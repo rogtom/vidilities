@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Button, Card, ListGroup } from 'react-bootstrap';
+import React from 'react';
+import { Button, Card } from 'react-bootstrap';
 import Location from '../Locations';
 import { AuthUserContext } from '../Session';
 import * as ROUTES from '../../constants/routes';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
-import Firebase, { FirebaseContext } from '../Firebase';
 
-const FilmCard = ({ title, id, picture, locations, firebase, showDetails, getDetails, imdbID, imdbRating}) => {
+
+const FilmCard = ({ title, id, picture, locations, firebase, showDetails, getDetails, imdbID }) => {
 
   const onHandleDetails = () => {
 
