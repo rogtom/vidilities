@@ -1,58 +1,52 @@
-import React, { useState } from 'react';
-
-import { PasswordForgetForm } from '../PasswordForget';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import PasswordChangeForm from '../PasswordChange';
-import { Button, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import SideNaw from '../SideNav/SideNav';
-
-import UserFilms from '../UserFilms';
+import UserFilms from '../UserFilms/';
 import { AuthUserContext } from '../Session';
-import { Link } from 'react-router-dom';
-import * as ROUTES from '../../constants/routes';
+
+
+import { USER_FAVORITE, PASSWORD_CHANGE } from '../../constants/routes';
 
 
 const AccountPage = () => {
-
-  const [pasShow, setPasShow] = useState(false)
-
-  const toggleClass = () => {
-    setPasShow( prevState => !prevState)
-  }
+  
 
   return (
+      <AuthUserContext.Consumer>
+      {authUser =>
+        authUser &&
+        <Router>
+        <div className="container  account">
+          <h1>Account Page</h1>
+          <Row className="d-flex justify-content-between ">
+            <Col lg={2} className="justify-content-start">git
+              <SideNaw />
+            </Col>
+            <Col lg={10}>
+
+              <div className="d-flex flex-column justify-content-between">
+
+
+                <Switch>
+                  <Route exact path={USER_FAVORITE} component={UserFilms} />
+                  <Route path={PASSWORD_CHANGE} component={PasswordChangeForm} />
+                </Switch>
 
 
 
+              </div>
+            </Col>
+          </Row>
+        </div>
 
-  <AuthUserContext.Consumer>
-    {authUser =>
-      authUser &&
-      <div  className="container  account">
-        <h1>Account Page</h1>
-        <Row className="d-flex justify-content-between ">
-          <Col lg={2} className="justify-content-start">
-          <SideNaw toggle={toggleClass} />
-        </Col>
-          <Col lg={10}>
-
-            <div className="d-flex flex-column justify-content-between">
-              {!pasShow &&<UserFilms />}
-              {pasShow && < PasswordChangeForm />}
-            </div>
-          </Col>
-        </Row>
-      </div>
+        </Router>
+      }
+    </AuthUserContext.Consumer>
 
 
-    }
-  </AuthUserContext.Consumer>
-
-
-)
-
-
-
-
+  );
 };
 
 export default AccountPage;

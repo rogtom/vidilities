@@ -6,9 +6,6 @@ import { withFirebase } from '../Firebase';
 const FavCard = ({ id, title, picture, locations, firebase, setFilms, films }) => {
 
 
-
-
-
   const removeFav = () => {
 
 

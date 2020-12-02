@@ -1,20 +1,21 @@
-import React from "react";
-import { Button, Nav } from 'react-bootstrap';
-import * as ROUTES from '../../constants/routes';
+import React from 'react';
+import { Nav } from 'react-bootstrap';
 
-const SideNaw =({toggle}) => {
+import { USER_FAVORITE, PASSWORD_CHANGE } from '../../constants/routes';
+import { Link } from 'react-router-dom';
 
-  const handleToggle = () => {
-    toggle(true)
-  }
+const SideNaw = () => {
 
   return (
-    <Nav defaultActiveKey="/home" className="flex-column side-nav" >
 
-      <span style={{cursor: 'pointer', marginBottom: "25px",}} onClick={handleToggle}>User favorites</span>
-      <span style={{cursor: 'pointer', marginBottom: "25px"}} onClick={handleToggle}>Change password</span>
+    <Nav defaultActiveKey="/home" className="flex-column side-nav">
+
+
+      <Link to={USER_FAVORITE}>User favorite</Link>
+      <Link to={PASSWORD_CHANGE}>Change password</Link>
 
     </Nav>
-  )
-}
-export default SideNaw
+
+  );
+};
+export default SideNaw;

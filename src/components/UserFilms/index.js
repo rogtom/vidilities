@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel, Card, CardColumns } from 'react-bootstrap';
 import { withFirebase } from '../Firebase';
 import FavCard from './FavoriteCard';
 
@@ -13,9 +12,7 @@ const UserFilms = ({ firebase }) => {
 
   }, []);
 
-  const vavUpdate = () => {
 
-  }
 
   return (
 
