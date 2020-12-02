@@ -6,6 +6,7 @@ import * as ROUTES from '../../constants/routes';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import Firebase, { FirebaseContext } from '../Firebase';
+import { trackPromise } from 'react-promise-tracker';
 
 const FilmCard = ({ title, id, picture, locations, firebase, showDetails, getDetails, imdbID, imdbRating}) => {
 

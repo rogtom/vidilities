@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { withRouter } from "react-router";
 import PasswordChangeForm from '../PasswordChange';
 import { Col, Row } from 'react-bootstrap';
 import SideNaw from '../SideNav/SideNav';
@@ -21,7 +22,7 @@ const AccountPage = () => {
         <div className="container  account">
           <h1>Account Page</h1>
           <Row className="d-flex justify-content-between ">
-            <Col lg={2} className="justify-content-start">git
+            <Col lg={2} className="justify-content-start">
               <SideNaw />
             </Col>
             <Col lg={10}>
@@ -49,4 +50,4 @@ const AccountPage = () => {
   );
 };
 
-export default AccountPage;
+export default withRouter(AccountPage);

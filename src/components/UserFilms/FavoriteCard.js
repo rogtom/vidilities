@@ -25,8 +25,12 @@ const FavCard = ({ id, title, picture, locations, firebase, setFilms, films }) =
         <div>
           <Card.Title>{title}</Card.Title>
 
-            {locations.map(el => <ListGroup.Item key={el.id}
-                                                 className="favoriteCardBody">{el.display_name}</ListGroup.Item>)}
+            {locations.map(el =>
+              <a href={el.url} target="_blank" key={el.id}>
+              <ListGroup.Item className="favoriteCardBody">
+                {el.display_name}
+              </ListGroup.Item>
+            </a>)}
 
 
         </div>

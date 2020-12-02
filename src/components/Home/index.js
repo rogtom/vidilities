@@ -2,8 +2,31 @@ import React, { useState, useEffect } from 'react';
 import Search from '../Search';
 import FilmCard from '../Card';
 import DetailsModal from '../Details';
-import { Button } from 'react-bootstrap';
+import { usePromiseTracker } from "react-promise-tracker";
+import { trackPromise } from 'react-promise-tracker';
+import Loader from 'react-loader-spinner';
 
+export const LoadingIndicator = props => {
+  const { promiseInProgress} = usePromiseTracker();
+
+  return (
+
+    promiseInProgress &&
+
+    <div
+      style={{
+       width: "100%",
+        height: "100",
+      display: "flex",
+       justifyContent: "center",
+        alignItems: "center"
+      }}
+    >
+      <Loader type="ThreeDots" color="lightgray" height="100" width="100" />
+      </div>
+
+  )
+}
 
 const Home = () => {
 
@@ -37,13 +60,14 @@ const Home = () => {
   useEffect(() => {
 
 
-    filmSearch?.forEach(el => fetch(`https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=${el.imdbID}&source=imdb`, {
+    filmSearch?.forEach(el => trackPromise(
+      fetch(`https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=${el.imdbID}&source=imdb`, {
       'method': 'GET',
       'headers': {
         'x-rapidapi-key': '790017f6aemsh6c9d13e8a3f3896p12bf9bjsn9cfbc465c4f2',
         'x-rapidapi-host': 'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com',
       },
-    })
+    }))
       .then(response => response.json())
       .then(films => films.collection)
       .then(films => Object.values(films).length !== 0 && setFilmData(prev => [...prev, films]))
@@ -71,14 +95,14 @@ const Home = () => {
 
 
   const getDetails = (imdbID) => {
-
+    trackPromise(
     fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?i=${imdbID}&r=json`, {
       'method': 'GET',
       'headers': {
         'x-rapidapi-key': '790017f6aemsh6c9d13e8a3f3896p12bf9bjsn9cfbc465c4f2',
         'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com',
       },
-    })
+    }))
       .then(response => response.json())
       .then(response => setDetails(response))
       .catch(err => {
@@ -90,13 +114,12 @@ const Home = () => {
 
   return (
     <div className="container d-flex flex-column align-items-center justify-content-center">
-      <h3>Go anf find something interesting </h3>
+      <h3>Go and find something interesting </h3>
       <Search submitTerm={handleSearchSubmit} />
 
       <div className="d-flex justify-content-center flex-lg-wrap ">
         {error === '' ? filmData?.map(film => {
             return (
-
 
               <FilmCard key={film.id}
                         id={film.id}
@@ -120,7 +143,10 @@ const Home = () => {
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
+
         </>
+
+        <LoadingIndicator/>
       </div>
 
 

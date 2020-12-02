@@ -2,11 +2,16 @@
   background-color: rgba(64,55,54, .9);
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
+padding: 10px;
   border: 2px solid rgb(74, 68, 68);
 }
 
 .locationImageSize {
-  width: 50px;
+  height: 15px;
 
+}
+
+.card-picture {
+  filter: brightness(280%);
 }

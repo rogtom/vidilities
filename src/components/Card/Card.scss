@@ -1,8 +1,11 @@
 .Card {
   margin: 10px 25px;
-  background-color: rgba(64,55,54, .9);
-  box-shadow: 5px 5px 15px 0 rgba(0,0,0, 0.75);
+  background-color: rgba(64, 55, 54, .9);
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.75);
+
+
 }
+
 .card-btn {
   border: 1px solid white;
   font-size: .7rem;
@@ -11,10 +14,10 @@
 }
 
 .statistic-panel {
-  background: rgb(66,55,54);
-  background: linear-gradient(0deg, rgba(64,55,54,.9) 0%, rgba(63,55,54,0.6) 50%, rgba(63,55,54,0.2) 100%);
+  background: rgb(66, 55, 54);
+  background: linear-gradient(0deg, rgba(64, 55, 54, .9) 0%, rgba(63, 55, 54, 0.6) 50%, rgba(63, 55, 54, 0.2) 100%);
   font-size: .60rem;
-padding: 0.2rem;
+  padding: 0.2rem;
 
   position: relative;
   bottom: 1.225rem;

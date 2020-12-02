@@ -46,7 +46,7 @@ class PasswordChangeForm extends Component {
 
 
         <Form.Group controlId="formBasicPasswordOne">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Type new password</Form.Label>
           <Form.Control type="password"
                         name="passwordOne"
                         value={passwordOne}
@@ -56,7 +56,7 @@ class PasswordChangeForm extends Component {
         </Form.Group>
 
         <Form.Group controlId="formBasicPasswordTwo">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Re-enter password</Form.Label>
           <Form.Control type="password"
                         name="passwordTwo"
                         value={passwordTwo}
@@ -65,7 +65,7 @@ class PasswordChangeForm extends Component {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" disabled={isInvalid}>
+        <Button variant="outline-secondary" type="submit" disabled={isInvalid}>
           Reset My Password
         </Button>
 
