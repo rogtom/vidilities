@@ -1,8 +1,7 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-
 import { USER_FAVORITE, PASSWORD_CHANGE } from '../../constants/routes';
-import { Link } from 'react-router-dom';
+import {  withRouter, Link } from "react-router-dom";
 
 const SideNaw = () => {
 
@@ -18,4 +17,4 @@ const SideNaw = () => {
 
   );
 };
-export default SideNaw;
+export default withRouter(SideNaw);

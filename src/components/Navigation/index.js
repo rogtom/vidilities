@@ -22,6 +22,9 @@ const NavigationAuth = () => (
       <Link to={ROUTES.HOME}>Search Films</Link>
     </li>
     <li>
+      <Link to={ROUTES.TOP_FILMS}>Top Films</Link>
+    </li>
+    <li>
       <Link to={ROUTES.ACCOUNT}>Account</Link>
     </li>
     <li>
@@ -34,6 +37,9 @@ const NavigationNonAuth = () => (
   <ul>
     <li>
       <Link to={ROUTES.HOME}>Home</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.TOP_FILMS}>Top Films</Link>
     </li>
     <li>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>

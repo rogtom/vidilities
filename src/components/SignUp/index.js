@@ -7,7 +7,7 @@ import * as ROUTES from '../../constants/routes';
 
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import SignOutButton from '../SignOut';
+
 
 const SignUpPage = () => (
   <div className="container d-flex flex-column align-items-center justify-content-center">

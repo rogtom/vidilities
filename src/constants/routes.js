@@ -9,3 +9,4 @@ export const ACCOUNT = '/account';
 export const PASSWORD_FORGET = '/pw-forget';
 export const PASSWORD_CHANGE = '/pw-change';
 export const USER_FAVORITE = '/user-fav';
+export const TOP_FILMS = '/top-films';

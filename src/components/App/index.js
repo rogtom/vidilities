@@ -12,6 +12,7 @@ import AccountPage from '../Account';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session/index';
 import Header from '../Header';
+import TopFilms from '../TopFilms/index';
 
 
 
@@ -21,7 +22,8 @@ const App = () => (
       <Header />
 
 
-      <Switch><Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Switch>
+        <Route exact path={ROUTES.LANDING} component={LandingPage} />
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
         <Route
@@ -30,7 +32,10 @@ const App = () => (
           component={PasswordForgetPage}
         />
         <Route path={ROUTES.HOME} component={HomePage} />
-        <Route path={ROUTES.ACCOUNT} component={AccountPage} /></Switch>
+        <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+        <Route path={ROUTES.TOP_FILMS} component={TopFilms} />
+
+      </Switch>
 
 
     </div>

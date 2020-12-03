@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { withRouter } from "react-router";
+import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
 import PasswordChangeForm from '../PasswordChange';
 import { Col, Row } from 'react-bootstrap';
 import SideNaw from '../SideNav/SideNav';
@@ -29,13 +28,12 @@ const AccountPage = () => {
 
               <div className="d-flex flex-column justify-content-between">
 
-
                 <Switch>
+
                   <Route exact path={USER_FAVORITE} component={UserFilms} />
                   <Route path={PASSWORD_CHANGE} component={PasswordChangeForm} />
+
                 </Switch>
-
-
 
               </div>
             </Col>
