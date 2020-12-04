@@ -6,7 +6,7 @@ import * as ROUTES from '../../constants/routes';
 const SignOutButton = ({ firebase }) => (
 
 
-    <Button variant="outline-secondary" className="text-white" size="sm" onClick={firebase.doSignOut.then(this.props.history.push(ROUTES.HOME))}>Sign Out</Button>
+    <Button variant="outline-secondary" className="text-white" size="sm" onClick={firebase.doSignOut}>Sign Out</Button>
 
 
 

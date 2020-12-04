@@ -91,9 +91,9 @@ const TopFilms = () => {
 
   return (
 
-      <div className="container d-flex flex-column justify-content-center align-items-center top-films h-100">
+      <div className="container d-flex flex-column justify-content-center align-items-center top-films vh-100">
         <h1>Top films</h1>
-        <ListGroup>
+        <ListGroup className="justify-content-center">
           {pagination.currentFilms && pagination.currentFilms.map((item => (
             <ListGroupItem key={item.imdbID} className="bg-transparent">
               <Row>
