@@ -25,9 +25,8 @@
 
 body {
 
-background: linear-gradient(rgba(64,55,54, .7), rgba(64, 55, 54, 0.7)), url("assets/backfround-image.jpg");
   color: lightgray;
-  background-attachment: fixed;
+  background: linear-gradient(rgba(64, 55, 54, .7), rgba(64, 55, 54, 0.7)), url("assets/backfround-image.jpg") no-repeat fixed ;
   height: 100vh;
 }
 
