@@ -36,7 +36,7 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
   <ul>
     <li>
-      <Link to={ROUTES.HOME}>Home</Link>
+      <Link to={ROUTES.HOME}>Search Films</Link>
     </li>
     <li>
       <Link to={ROUTES.TOP_FILMS}>Top Films</Link>
