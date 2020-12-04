@@ -20,7 +20,7 @@ const Search = ({submitTerm}) => {
 
 
   return (
-    <form onSubmit={handleSubmit}  className="form">
+    <form onSubmit={handleSubmit}  className="container form">
       <Form.Group controlId="formBasicSearch" className='formGrup'>
         <Form.Label className="formLabel">Search for your favourite movie or TV series</Form.Label>
         <Form.Control type="text" placeholder="Enter title" onChange={handleChange} className="search-input"/>
