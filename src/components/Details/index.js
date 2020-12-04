@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Modal, Button, Container, Row, Col, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { LoadingIndicator } from '../Home';
+
 
 
 function DetailsModal(props) {

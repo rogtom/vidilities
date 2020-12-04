@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navigation from "../Navigation";
-import Logo, {ReactComponent as Oczy} from "../../assets/Logo.svg"
+import {ReactComponent as Oczy} from "../../assets/Logo.svg"
 import * as ROUTES from '../../constants/routes';
 import { Link } from 'react-router-dom';
 
