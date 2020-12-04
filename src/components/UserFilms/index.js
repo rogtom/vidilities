@@ -16,7 +16,7 @@ const UserFilms = ({ firebase }) => {
 
   return (
 
-    <div className="container d-flex flex-column flex-lg-row">
+    <div className="container d-flex flex-column flex-lg-row h-100">
       {films?.map(el => <FavCard key={el.film.id}
                                  picture={el.film.picture}
                                  title={el.film.title}
