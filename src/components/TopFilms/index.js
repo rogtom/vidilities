@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { ListGroup, ListGroupItem, Image, Col, Row } from 'react-bootstrap';
 import ReactPaginate from 'react-paginate';
-import faker from 'faker';
-import * as ROUTES from '../../constants/routes';
 
-import { usePromiseTracker } from "react-promise-tracker";
+
 import { trackPromise } from 'react-promise-tracker';
-import Loader from 'react-loader-spinner';
+
 import { LoadingIndicator } from '../Home';
 
 
@@ -81,7 +79,6 @@ const TopFilms = () => {
 
 
         })))
-        .then(()=> console.log(pagination.currentFilms))
         .catch(err => {
           console.error(err);
         })
@@ -89,8 +86,7 @@ const TopFilms = () => {
 
   },[pagination.currentData, pagination.numberPerPage, pagination.offset])
 
-  // console.log(pagination.data);
-  console.log(pagination.currentFilms)
+
 
 
   return (
