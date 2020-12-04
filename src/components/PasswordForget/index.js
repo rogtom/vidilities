@@ -6,7 +6,7 @@ import * as ROUTES from '../../constants/routes';
 import { Button, Form } from 'react-bootstrap';
 
 const PasswordForgetPage = () => (
-  <div className="container">
+  <div className="container h-100">
     <h1>PasswordForget</h1>
     <PasswordForgetForm />
   </div>
