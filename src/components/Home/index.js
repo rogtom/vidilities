@@ -113,7 +113,7 @@ const Home = () => {
 
 
   return (
-    <div className="container d-flex flex-column align-items-center justify-content-center home">
+    <div className="container d-flex flex-column align-items-center home">
       <h3>Go and find something interesting </h3>
       <Search submitTerm={handleSearchSubmit} />
 
