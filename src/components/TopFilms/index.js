@@ -91,7 +91,7 @@ const TopFilms = () => {
 
   return (
 
-      <div className="container d-flex flex-column justify-content-center align-items-center top-films ">
+      <div className="container d-flex flex-column justify-content-center align-items-center top-films h-100">
         <h1>Top films</h1>
         <ListGroup>
           {pagination.currentFilms && pagination.currentFilms.map((item => (
