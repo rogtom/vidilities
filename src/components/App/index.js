@@ -18,7 +18,7 @@ import TopFilms from '../TopFilms/index';
 
 const App = () => (
   <Router>
-    <div>
+    <div className="app-content">
       <Header />
 
 
