@@ -101,7 +101,7 @@ class SignUpFormBase  extends Component {
 
           <Form.Group controlId="formBasicPasswordOne">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="password"
+            <Form.Control type="email"
                           name="passwordOne"
                           value={passwordOne}
                           placeholder="Enter password"

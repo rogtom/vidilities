@@ -5,14 +5,14 @@ import 'firebase/firestore'
 
 
 const config = {
-    apiKey: "AIzaSyBDyf16k9CwO-qEbYPHYXFdBeIlF6wyaPA",
-    authDomain: "vidilities.firebaseapp.com",
-    databaseURL: "https://vidilities.firebaseio.com",
-    projectId: "vidilities",
-    storageBucket: "vidilities.appspot.com",
-    messagingSenderId: "583205154666",
-    appId: "1:583205154666:web:f814c98631eacac8c93f13",
-    measurementId: "G-W60WHJBXP0"
+  apiKey: "AIzaSyBDyf16k9CwO-qEbYPHYXFdBeIlF6wyaPA",
+  authDomain: "vidilities.firebaseapp.com",
+  databaseURL: "https://vidilities.firebaseio.com",
+  projectId: "vidilities",
+  storageBucket: "vidilities.appspot.com",
+  messagingSenderId: "583205154666",
+  appId: "1:583205154666:web:f814c98631eacac8c93f13",
+  measurementId: "G-W60WHJBXP0"
 };
 
 class Firebase {
@@ -29,11 +29,10 @@ class Firebase {
   doCreateUserWithEmailAndPassword = (email, password) =>
     this.auth.createUserWithEmailAndPassword(email, password)
       .then(() => {
-        //Once the user creation has happened successfully, we can add the currentUser into firestore
-        //with the appropriate details.
+
         this.db.collection('users').doc(this.auth.currentUser.uid)
           .set({favorites: []})
-          //ensure we catch any errors at this stage to advise us if something does go wrong
+
           .catch(error => {
             console.log('Something went wrong with added user to firestore: ', error);
           })

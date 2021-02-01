@@ -7,11 +7,11 @@ import UserFilms from '../UserFilms/';
 import { AuthUserContext } from '../Session';
 
 
-import { USER_FAVORITE, PASSWORD_CHANGE } from '../../constants/routes';
+import { ACCOUNT, PASSWORD_CHANGE } from '../../constants/routes';
 
 
 const AccountPage = () => {
-  
+
 
   return (
       <AuthUserContext.Consumer>
@@ -30,7 +30,7 @@ const AccountPage = () => {
 
                 <Switch>
 
-                  <Route exact path={USER_FAVORITE} component={UserFilms} />
+                  <Route path={ACCOUNT} component={UserFilms} />
                   <Route path={PASSWORD_CHANGE} component={PasswordChangeForm} />
 
                 </Switch>

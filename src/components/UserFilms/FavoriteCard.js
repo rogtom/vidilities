@@ -19,7 +19,7 @@ const FavCard = ({ id, title, picture, locations, firebase, setFilms, films }) =
 
 
   return (
-    <Card style={{ width: '18rem' }} className="favoriteCard">
+    <Card className="favoriteCard">
       <Card.Img variant="top" src={picture} />
       <Card.Body className="d-flex flex-column justify-content-between">
         <div>

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 
 
-const FilmCard = ({ title, id, picture, locations, firebase, showDetails, getDetails, imdbID, imdbRating}) => {
+const FilmCard = ({ title, id, picture, locations, firebase, showDetails, getDetails, imdbID}) => {
 
   const onHandleDetails = () => {
 
@@ -28,6 +28,7 @@ const FilmCard = ({ title, id, picture, locations, firebase, showDetails, getDet
       .catch(err => console.log(err));
 
   };
+  console.log(handleAddToFavorite);
 
 
   return (
