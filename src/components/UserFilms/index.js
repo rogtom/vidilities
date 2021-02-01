@@ -7,16 +7,16 @@ const UserFilms = ({ firebase }) => {
 
 	useEffect(() => {
 		firebase.getUserFavorites(setFilms);
-	}, []);
+	}, [firebase]);
 
 	return (
 		<div className='container d-flex    '>
-			<div class='row'>
+			<div className='row'>
 
 					{films?.map((el) => (
-            <div class=' col-lg-6 col-xl-4'>
+            <div class=' col-md-6 col-xl-4' key={el.film.id}>
 						<FavCard
-							key={el.film.id}
+
 							picture={el.film.picture}
 							title={el.film.title}
 							locations={el.film.locations}

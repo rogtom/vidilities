@@ -117,7 +117,7 @@ const Home = () => {
       <h3>Go and find something interesting </h3>
       <Search submitTerm={handleSearchSubmit} />
 
-      <div className="d-flex justify-content-center flex-lg-wrap ">
+      <div className="d-flex justify-content-center flex-wrap ">
         {error === '' ? filmData?.map(film => {
             return (
 
