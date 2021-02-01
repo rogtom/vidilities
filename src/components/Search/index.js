@@ -7,7 +7,7 @@ const Search = ({submitTerm}) => {
 
   const handleChange =(e) => {
     const value = e.target.value;
-    setSearch(value);
+    setSearch(value.trim());
 
   }
 
