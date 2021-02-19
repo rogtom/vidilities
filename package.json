@@ -1,29 +1,24 @@
 {
-  "name": "vid",
+  "name": "look2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2",
-    "bootstrap": "^4.5.3",
-    "create-react-app": "^4.0.1",
-    "faker": "^5.1.0",
-    "firebase": "^8.1.1",
-    "for": "^0.1.0",
-    "node-sass": "^4.14.1",
-    "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^17.0.1",
-    "react-loader-spinner": "^3.1.14",
-    "react-paginate": "^6.5.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.1",
+    "bootstrap": "^4.6.0",
+    "firebase": "^8.2.8",
+    "node-sass": "^5.0.0",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.5.0",
+    "react-dom": "^16.11.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-paginate": "^7.1.0",
     "react-promise-tracker": "^2.1.0",
-    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "4.0.2",
     "recompose": "^0.30.0",
-    "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,8 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@svgr/cli": "^5.5.0"
   }
 }
